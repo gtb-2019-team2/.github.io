@@ -1,0 +1,24 @@
+.checkbox{
+  display: none;
+}
+.box{
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  border: 2px solid #9ec34b;
+  font-size: 16px;
+  color: #9ec34b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 4px;
+  transition: .4s;
+  text-align: center;
+}
+
+.checkbox:checked + .box{
+  background-color: #9ec34b;
+  border-color: #cbe585;
+  color: #FFF;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p>テーブル状況照会</p>
+        
+    </header>
+
+    <form method="POST" name="table_number">
+      <input class = "checkbox" type="checkbox" name="table" value="2" onClick="count(this.form);customers(this.form)" id = "1">
+      <label class = "box" for="1">No.1 (2人)</label>
+      <input class = "checkbox"type="checkbox" name="table" value="4" onClick="count(this.form);customers(this.form)" id = "2">
+      <label class = "box" for="2">No.2 (4人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="2" onClick="count(this.form);customers(this.form)" id = "3">
+      <label class = "box" for="3">No.3 (2人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="4" onClick="count(this.form);customers(this.form)" id = "4">
+      <label class = "box" for="4">No.4 (4人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="2" onClick="count(this.form);customers(this.form)" id = "5">
+      <label class = "box" for="5">No.5 (2人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="4" onClick="count(this.form);customers(this.form)" id = "6">
+      <label class = "box" for="6">No.6 (4人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="2" onClick="count(this.form);customers(this.form)" id = "7">
+      <label class = "box" for="7">No.7 (2人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="4" onClick="count(this.form);customers(this.form)" id = "8">
+      <label class = "box" for="8">No.8 (4人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="2" onClick="count(this.form);customers(this.form)" id = "9">
+      <label class = "box" for="9">No.9 (2人)</label>
+      <input class = "checkbox" type="checkbox" name="table" value="4" onClick="count(this.form);customers(this.form)" id = "10">
+      <label class = "box" for="10">No.10 (4人)</label>
+
+      <p id = "table_count">0</p>卓埋まっている
+      <p id = "result">0</p>%の混雑率
+      <p id = "customers">0</p>人の客数
+
+
+    </form>
+
+  <script LANGUAGE = "JavaScript">
+
+      function count(form){
+          var total = 0;
+          var max=form.table.length;
+          var percent;
+          for(var index = 0; index < max; index++){
+              if(eval("document.table_number.table[" + index + "].checked") == true){
+                  total += 1;
+                  percent = total/max*100;
+              }
+          }
+          document.getElementById("table_count").innerHTML = total;
+          document.getElementById("result").innerHTML = percent;
+      }
+
+      function customers(form){
+        var customer = 0;
+        var max=form.table.length;
+        for (var i = 0; i < max; i++){
+             if (document.table_number.elements[i].checked){
+                customer += eval(document.table_number.elements[i].value);
+             }
+         }
+         document.getElementById("customers").innerHTML = customer;
+      }
+  </script>
+</body>
+</html>
