@@ -16,7 +16,8 @@
         </header>
         <main>
             <form action="top.php" method="post">
-                <input type="text" name="comment"><br>
+                駅名:<input type="text" name="comment1"><br>
+                ジャンル:<input type="text" name="comment2"><br>
                 <input type="submit"  value="送信">
             </form>
             <?php
@@ -30,14 +31,17 @@
                     private $apiVersion = 'v1';
 
                     /*URLへの接続*/
-                    public function send($params)
+                    public function send($params, $params2)
                     {
-                        $url = sprintf("%s%s/?key=%s&range=3&keyword=%s&count=100&format=json",
+                        $url = sprintf("%s%s/?key=%s&range=3&keyword=%s&keyword=%s&count=100&format=json",
                             self::URL,
                             $this->apiVersion,
                             $this->apiKey,
-                            $params
+                            $params,
+                            $params2
                         );
+
+                        echo $params;
 
                         $sh = file_get_contents($url);
                         echo $sh;
@@ -64,11 +68,21 @@
                     }
                 }
 
-                if(isset($_POST["comment"]))
+                if(isset($_POST["comment1"]))
                 {
                     $hp = new Hotpepper();
-                    $comment = $_POST["comment"];
-                    $hp->send($comment);
+                    $comment = $_POST["comment1"];
+                    $comment2 = $_POST["comment2"];
+                    if($comment != NULL)
+                    {
+                        echo $comment;
+                        $hp->send($comment, $comment2);
+                        $comment = NULL;
+                    }
+                    else{
+                        $alert = "<script type='text/javascript'>alert('駅名を入れてください');</script>";
+                        echo $alert;
+                    }
                 }
             ?>
         </main>
