@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>@@</title>
+    <script src="https://map.yahooapis.jp/js/V1/jsapi?appid=OY1oDxsr" type="text/javascript" charset="UTF-8"></script>
+    <!--タッチ操作による地図スクロール・ピンチ操作による地図縮尺の変更（一部の端末機種のみの有効化-->
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+</head>
+
+<body>
+    <div id="map" style="width:375px; height:812px;"></div>
+
+
+    <!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
+    <a href="https://developer.yahoo.co.jp/about">
+
+        <!-- <img src="https://s.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" 
+            title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" border="0" style="margin:15px 15px 15px 15px"></a> -->
+        <!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
+
+        <script type="text/javascript">
+            window.onload = function() {
+                var ymap = new Y.Map("map", {
+                    configure: {
+                        mapType: Y.Map.TYPE.SMARTPHONE,
+                        scrollwheelZoom: true,
+                        singleClickPan: true,
+                        doubleClickZoom: true,
+                        continuousZoom: true,
+                        scrollWheelZoom: true
+                    }
+                });
+
+                //地図表示
+                ymap.drawMap(new Y.LatLng(35.65851613933086, 139.7017727955547), 17);
+                //地図レイヤの切り替え
+                ymap.addControl(new Y.LayerSetControl());
+                //スケールバー
+                ymap.addControl(new Y.ScaleControl());
+                //スライダー
+                //ymap.addControl(new Y.SliderZoomControl());
+                //中心軸を元に
+                ymap.zoomIn();
+                ymap.zoomOut();
+                //ピンのアイコン
+                var icon = new Y.Icon('pin_color.png', {
+                    iconSize: new Y.Size(26, 42)
+                });
+                var marker = new Y.Marker(new Y.LatLng(35.65851613933086, 139.7017727955547), {
+                    icon: icon
+                }, {});
+                //大き目吹き出し
+                marker.bindInfoWindow('Hello World');
+                //アイコン・マーカーの表示
+                ymap.addFeature(marker);
+            }
+        </script>
+</body>
+
+</html>
