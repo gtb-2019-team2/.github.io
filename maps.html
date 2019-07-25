@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>maps</title>
     <script src="https://map.yahooapis.jp/js/V1/jsapi?appid=OY1oDxsr" type="text/javascript" charset="UTF-8"></script>
+    <script src="https://unpkg.com/yahoo-map-cluster@latest/bundle/ymap-cluster.js"></script>
     <!--タッチ操作による地図スクロール・ピンチ操作による地図縮尺の変更（一部の端末機種のみの有効化-->
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
 </head>
@@ -26,13 +27,9 @@
                 var ymap = new Y.Map("map", {
                     configure: {
                         mapType: Y.Map.TYPE.SMARTPHONE,
-                        //
                         singleClickPan: true,
-                        //
                         doubleClickZoom: true,
-                        //
                         continuousZoom: true,
-                        //
                         scrollWheelZoom: true
                     }
                 });
@@ -45,21 +42,37 @@
                 ymap.addControl(new Y.ScaleControl());
                 //スライダー
                 //ymap.addControl(new Y.SliderZoomControl());
-                //中心軸を元に
+                //中心軸を元
                 ymap.zoomIn();
                 ymap.zoomOut();
+
                 //ピンのアイコン設定
                 var icon = new Y.Icon('pin_color.png', {
                     iconSize: new Y.Size(26, 42)
                 });
+
                 //マーカ表示
+                var marker = new Y.Marker(new Y.LatLng(35.65851613933086, 139.7017727955547), {
+                    icon: icon
+                });
+                /*
                 var markers = [];
                 markers.push(new Y.Marker(new Y.LatLng(35.65851613933086, 139.7017727955547)), {
                     icon: icon
-                }, );
+                });
                 markers.push(new Y.Marker(new Y.LatLng(35.659018623807, 139.70356593366)), {
                     icon: icon
-                }, );
+                });
+                */
+
+                /*複数マーカプログラム[memo]
+                for (i = 0; i < data.length; i++) {
+                    var myMarker = new Y.Marker(data[i].position);
+                    myMarker.bindInfoWindow(data[i].content);
+                    myMap.addFeature(myMarker);
+                } 
+                */
+
                 //大き目吹き出し
                 marker.bindInfoWindow('Hello World');
                 //アイコン・マーカーの表示
