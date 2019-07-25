@@ -1,13 +1,14 @@
 
 
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+    <html>
     <head>
-        <meta charset="utf-8">
-        <title>テスト</title>
-        
+        <title>
+            title
+        </title>
     </head>
+
     <body>
         <header>
             <h1>
@@ -15,12 +16,9 @@
             </h1>
         </header>
         <main>
-            <form action="top.php" method="post">
-                駅名:<input type="text" name="comment1"><br>
-                ジャンル:<input type="text" name="comment2"><br>
-                <input type="submit"  value="送信">
-            </form>
-            <?php
+         
+       
+        <?php
 	            header('Access-Control-Allow-Origin: *');
 	            class Hotpepper {
                     /*URL*/
@@ -31,60 +29,180 @@
                     private $apiVersion = 'v1';
 
                     /*URLへの接続*/
-                    public function send($params, $params2)
+                    public function send($params)
                     {
-                        $url = sprintf("%s%s/?key=%s&range=3&keyword=%s&keyword=%s&count=100&format=json",
+                        //各種入力した値を用いてAPIに接続用URL設定
+                        //$params 駅名
+                        //$params2 ジャンルコード(予定)
+                        $url = sprintf("%s%s/?key=%s&keyword=%s&range=3&count=10&format=json",
                             self::URL,
                             $this->apiVersion,
                             $this->apiKey,
-                            $params,
-                            $params2
+                            $params
                         );
 
-                        echo $params;
-
+                        //APIに接続
                         $sh = file_get_contents($url);
-                        echo $sh;
-                    
-                        // if(!extension_loaded('curl'))
-                        // {
-                        //     exit('cURL etension not loaded.');
-                        // }
-                        // $ch = curl_init();
-                        // curl_setopt($ch, CURLOPT_URL, $url);
-                        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                        // curl_setopt($ch, CURLOPT_VERBOSE, false);
-                        // curl_setopt($ch, CURLOPT_HEADER, false);
-                        // curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-                        // echo $ch;
-                        // $response = curl_exec($ch);
-                        // echo $response;
-                        // if($response === false)
-                        // {
-                        //     exit('errorno:' . curl_getinfo($ch, CURLINFO_HTTP_CODE));
-                        // }
-                    
-                        return  $sh;  //json_decode($response,true);
+                        
+                        
+                        //取得したjsonデータを配列に入れる
+                        return  json_decode($sh,true);
                     }
                 }
 
+                class Search
+                {
+
+                    public function listView($comment)
+                    {
+                        $results = $this->mainSearch($comment);
+                        echo '<br>';
+                        $count = 0;
+                        for ($i = 1; $i < 100; $i++)
+                        {
+
+                            if($results[$i]['station_name'] === $comment){
+                                $count++;
+                                //echo $count;
+                                $Buffer="<div class='shop_list_cell cell_{$count}'>
+                                <div class=right_area>";
+ 
+ 
+                                // 店名
+                                $Buffer.="<div class='shop_info_2 info_02' id=shop_info><h2 class=recieve_shop_name_2 id=s_name>{$results[$i]['name']}";
+                                $Buffer.='</h2>';
+ 
+ 
+                                //ジャンル、タグ
+                                $Buffer.="<p class=recieve_shop_genre_2>{$results[$i]['genre']['name']}";
+                                $Buffer.='</p></div>';
+ 
+ 
+                                //住所
+                                $Buffer.="<div class=recieve_shop_address>{$results[$i]['address']}";
+                                $Buffer.='</div>';
+ 
+                                //画像など
+                                $Buffer.="<div class=img-wrap><img class=recieve_list_photo src={$results[$i]['photo']['mobile']['l']} alt=shop_photo width=845px></div>";
+ 
+ 
+                                echo $Buffer.='</div></div>';
+                            }
+
+                            // if($results[$i]['station_name'] === $comment){
+                            //     $count++;
+                            //     //echo $count;
+                            //     $Buffer="<div class='shop_list_cell cell_{$count}'>
+                            //     <div class=right_area>";
+ 
+ 
+                            //     // 店名
+                            //     $Buffer.="<div class='shop_info_2 info_02' id=shop_info><h2 class=recieve_shop_name_2 id=s_name>{$results[$i]['name']}";
+                            //     $Buffer.='</h2>';
+ 
+ 
+                            //     //ジャンル、タグ
+                            //     $Buffer.="<p class=recieve_shop_genre_2>{$results[$i]['genre']['name']}";
+                            //     $Buffer.='</p>';
+ 
+ 
+                            //     //住所
+                            //     $Buffer.="<div class=recieve_shop_address>{$results[$i]['address']}";
+                            //     $Buffer.='</div>';
+ 
+                            //     //画像など
+                            //     $Buffer.="<div class=img-wrap><img class=recieve_list_photo src={$results[$i]['photo']['mobile']['l']} alt=shop_photo width=845px></div>";
+ 
+ 
+                            //     echo $Buffer.='</div></div>';
+                            // }
+
+                            // if($results[$i]['station_name'] === $comment){
+                            //     $count++;
+                            //     //echo $count;
+                            //     $Buffer="<div class=right_area shop{$count}>";
+         
+         
+                            //     //画像など
+                            //     $Buffer.="<img class=recieve_list_photo src={$results[$i]['photo']['mobile']['l']} alt=shop_photo width=845px>";
+         
+         
+                            //     // 店名
+                            //     $Buffer.="<div class=shop_info_2 info_02 id=shop_info info_01><h2 class=recieve_shop_name_2 id=s_name>{$results[$i]['name']}";
+                            //     $Buffer.='</h2>';         
+    
+                            //     //ジャンル、タグ
+                            //     $Buffer.="<p class=recieve_shop_genre_2>{$results[$i]['genre']['name']}";
+                            //     $Buffer.='</p>';
+         
+         
+                            //     //住所
+                            //     $Buffer.="<div class=recieve_shop_address>{$results[$i]['address']}";
+                            //     $Buffer.='</div>';
+         
+         
+                            //     echo $Buffer.='</div></div>';
+                            // }
+                                // if($results[$i]['station_name'] === $comment){
+                                //     $count++;
+                                //     $Buffer='<div>';
+                                //     $Buffer.="<ul class=shop{$count}>";
+                                //     $Buffer.="<li class=aaa>{$results[$i]['name']}"; // 店名 
+                                //     $Buffer.='</li>';
+                                //     $Buffer.="<li class=bbb>{$results[$i]['genre']['name']}"; //ジャンル、タグ
+                                //     $Buffer.='</li>';
+                                //     $Buffer.="<li class=ccc>{$results[$i]['address']}"; //住所
+                                //     $Buffer.='</li>';
+                                //     $Buffer.="<li class=ddd><img src={$results[$i]['photo']['mobile']['l']}>"; //画像など
+                                //     $Buffer.='</li>';
+                                //     $Buffer.='</ul>';
+                                //     echo $Buffer.='</div>';
+                                // }
+                            
+                            if(empty($results[$i+1])){
+                                break;
+                            }
+                            
+                        }
+                        echo '</br>';
+                    }
+
+                
+
+                    public function mainSearch($comment)
+                    {  
+                        $hp = new Hotpepper();
+                        if($comment != NULL)
+                        {
+                            echo $comment;
+                            $array = $hp->send($comment);
+                            $count = 0;
+                            $results = $array['results']['shop'];
+                            $count = 0;
+                            return $results;
+                        }     
+                    }
+                    
+                }
+
+
+                
                 if(isset($_POST["comment1"]))
                 {
-                    $hp = new Hotpepper();
+                    
                     $comment = $_POST["comment1"];
-                    $comment2 = $_POST["comment2"];
-                    if($comment != NULL)
-                    {
-                        echo $comment;
-                        $hp->send($comment, $comment2);
-                        $comment = NULL;
-                    }
-                    else{
-                        $alert = "<script type='text/javascript'>alert('駅名を入れてください');</script>";
-                        echo $alert;
-                    }
+                    $S = new Search();
+                    $S->listView($comment);
                 }
+                else{
+                    $alert = "<script type='text/javascript'>alert('駅名を入れてください');</script>";
+                    echo $alert;
+                }
+                
+                $comment = NULL;
             ?>
+
+            
         </main>
     </body>
 
