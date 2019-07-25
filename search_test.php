@@ -43,7 +43,7 @@
 <section id="top_searching_block"><!-- searching area -->
 	<div class="search area01 overlay">
 		<div class="serach_free" id="form01">
-			<form method="post" action="top2.php"><!-- cgi書き換えが必要 -->
+			<form method="post" action="Search_to_List.php"><!-- cgi書き換えが必要 -->
 
  				<input class="input_here" type="text" name="comment1" value="" placeholder="駅名">
  	 			<input class="submit_btn" type="image" name="submit" src="images/common/common/submit_btn.png" hright="100px" alt="submit">
