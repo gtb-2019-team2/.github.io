@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0039)http://localhost:8080/Search_to_Map.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="./SATOW_Map.php_files/yolp_map.css">
+        
+      
+        <script src="./SATOW_Map.php_files/jsapi" type="text/javascript" charset="UTF-8"></script>
+        <script src="./SATOW_Map.php_files/ymap-cluster.js.ダウンロード"></script>
+        <!--タッチ操作による地図スクロール・ピンチ操作による地図縮尺の変更（一部の端末機種のみの有効化-->
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    </head>
+
+    <body>
+        <div id="map" style="width: 375px; height: 812px; position: relative; overflow: hidden; background: rgb(241, 241, 241);"><div style="position: absolute; z-index: 0; left: 4.25px; top: 47.5px; width: 375px; height: 812px; cursor: default;"><div class="yolp-tilelayer" style="position: absolute; left: 0px; top: 0px; z-index: 0;" name="NormalMap"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -130px; top: 158px; display: block;" src="./SATOW_Map.php_files/m"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -471px; top: 158px; display: block;" src="./SATOW_Map.php_files/m(1)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -130px; top: 499px; display: block;" src="./SATOW_Map.php_files/m(2)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -130px; top: -183px; display: block;" src="./SATOW_Map.php_files/m(3)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: 211px; top: 158px; display: block;" src="./SATOW_Map.php_files/m(4)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -471px; top: 499px; display: block;" src="./SATOW_Map.php_files/m(5)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -471px; top: -183px; display: block;" src="./SATOW_Map.php_files/m(6)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: 211px; top: 499px; display: block;" src="./SATOW_Map.php_files/m(7)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: 211px; top: -183px; display: block;" src="./SATOW_Map.php_files/m(8)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -130px; top: 840px; display: block;" src="./SATOW_Map.php_files/m(9)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: -471px; top: 840px; display: block;" src="./SATOW_Map.php_files/m(10)"><img style="position: absolute; padding: 0px; visibility: visible; border: none; margin: 0px; width: 341px; height: 341px; z-index: 0; left: 211px; top: 840px; display: block;" src="./SATOW_Map.php_files/m(11)"></div><div class="yolp-layer" style="position: absolute; left: 0px; top: 0px; z-index: 1; display: block;" name="システム"><div style="position: absolute; top: -5000px; left: -5000px; text-align: justify; width: 10000px; height: 10000px; z-index:0"><svg width="10000" height="10000" viewBox="0 0 10000 10000" style="position: relative;"></svg></div><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 82px; top: 103px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 306px; top: 292px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 331px; top: 320px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -35px; top: 174px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 564px; top: 311px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 365px; top: 478px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -86px; top: 212px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -96px; top: 213px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 23px; top: 284px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 56px; top: 293px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 197px; top: 293px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -165px; top: 284px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -24px; top: 184px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 60px; top: 279px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 249px; top: 306px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 168px; top: 322px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -11px; top: 198px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 153px; top: -68px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 462px; top: 609px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 268px; top: 387px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 55px; top: 424px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 7px; top: 354px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 47px; top: 471px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -71px; top: 359px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -275px; top: 360px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -6px; top: 218px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 108px; top: 165px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -15px; top: 206px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 36px; top: 479px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -46px; top: 175px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -71px; top: 361px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -5px; top: 360px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -13px; top: 198px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -62px; top: 218px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 361px; top: 486px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -53px; top: 202px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 12px; top: 366px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -15px; top: 206px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -260px; top: 507px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -15px; top: 206px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -23px; top: 181px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 172px; top: 323px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -24px; top: 266px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 116px; top: 85px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 80px; top: 101px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -49px; top: 223px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -41px; top: 378px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -46px; top: 223px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 8px; top: 526px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -100px; top: 272px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -5px; top: 218px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 38px; top: 433px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 17px; top: 302px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -208px; top: 422px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -17px; top: 385px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -65px; top: 221px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 72px; top: 444px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 415px; top: 272px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 49px; top: 440px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 14px; top: 296px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -82px; top: 158px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 92px; top: 162px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -52px; top: 201px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 38px; top: 433px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -28px; top: 272px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -9px; top: 498px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -53px; top: 349px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 13px; top: 354px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -39px; top: 242px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: 16px; top: 459px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -3px; top: 219px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -111px; top: 522px; z-index: 0; cursor: pointer;"><img src="./SATOW_Map.php_files/pin_color.png" class="" width="26" height="42" style="margin-left: -13px; margin-top: -42px; position: absolute; left: -120px; top: 180px; z-index: 0; cursor: pointer;"></div></div><div class="yjm-copyright" style="left: 1px; bottom: 1px; position: absolute;"><div cr="true" style="position: static; font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-align: left; padding: 0px; margin: 0px; line-height: 100%; color: black;">(C)Yahoo Japan,(C)ZENRIN</div></div><a href="https://map.yahoo.co.jp/maps?hlat=35.65913724038588&amp;lat=35.65913724038588&amp;hlon=139.70170439922487&amp;lon=139.70170439922487&amp;z=17&amp;datum=wgs&amp;mode=map&amp;.f=jsapilogo" target="_blank" id="yolp-logo-link" class="yolp-logo" style="z-index: 10; position: absolute; margin: 0px; padding: 0px; right: 3px; bottom: 3px;"><img src="./SATOW_Map.php_files/yj_logo.png" alt="" border="0"></a><div id="yolp_mapcount" style="position: absolute; left: 10px; bottom: 20px;"><!-- SpaceID=2080353133 loc=Z noad-spid --><img width="1" height="1" style="position:absolute;" alt="" src="./SATOW_Map.php_files/b"></div><ul class="yolp-ctrl yolp-noprint" style="position: absolute; right: 3px; top: 3px;"><li class="yolp-ctrl-overlay"><div id="yolp-ctrl-overlay-btn" class="yolp-ctrl-overlay-btn-on" style="display: none;"></div><div class="yolp-ctrl-overlay-list" style="display: none;"><div class="yolp-ctrl-overlay-item-off" id="weatherOverlay"><input class="yolp-overlaylayer-control-check" type="checkbox"><div class="yolp-overlaylayer-control-icon-weatherOverlay"></div><div class="weatherOverlay yolp-overlaylayer-control-name" style="color: rgb(112, 128, 144);">雨雲レーダー</div></div></div></li><li class="yolp-layerset-on map" title="地図へ変更する">地図</li><li class="yolp-layerset-off photo" title="航空写真へ変更する">航空写真</li><li class="yolp-layerset-off map-b1" title="地下街へ変更する">地下街</li></ul><div align="left" class="scalebar" style="width: 206px; height: 10px; bottom: 8px; right: 80px; font: 9px verdana; position: absolute;"><div sboundary="true" style="overflow: hidden; width: 4px; height: 10px; position: absolute; right: 117px;"><img src="./SATOW_Map.php_files/ui_forprint.gif" style="border: 0px none; margin: 0px; padding: 0px; position: absolute; left: 0px; top: -34px; width: 66px; height: 48px;"></div><div scalepanels="true" style="overflow: hidden; width: 68.7004px; height: 4px; position: absolute; top: 3px; right: 48px;"><img src="./SATOW_Map.php_files/ui_forprint.gif" style="border: 0px none; margin: 0px; padding: 0px; position: absolute; left: 0px; top: -44px; width: 66px; height: 48px;"><img src="./SATOW_Map.php_files/ui_forprint.gif" style="border: 0px none; margin: 0px; padding: 0px; position: absolute; left: 66px; top: -44px; width: 66px; height: 48px;"><img src="./SATOW_Map.php_files/ui_forprint.gif" style="border: 0px none; margin: 0px; padding: 0px; position: absolute; left: 132px; top: -44px; width: 66px; height: 48px;"></div><div eboundary="true" style="overflow: hidden; width: 4px; height: 10px; position: absolute; right: 44px;"><img src="./SATOW_Map.php_files/ui_forprint.gif" style="border: 0px none; margin: 0px; padding: 0px; position: absolute; left: -4px; top: -34px; width: 66px; height: 48px;"></div><span unitspanel="true" style="position: absolute; top: 1px; right: 0px; color: black;">100 m</span></div></div>
+        <main>
+         <!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
+         <a href="https://developer.yahoo.co.jp/about">
+
+<!-- <img src="https://s.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" 
+    title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" border="0" style="margin:15px 15px 15px 15px"></a> -->
+<!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
+
+<script type="text/javascript">
+    window.onload = function() {
+        var ymap = new Y.Map("map", {
+            configure: {
+                mapType: Y.Map.TYPE.SMARTPHONE,
+                singleClickPan: true,
+                doubleClickZoom: true,
+                continuousZoom: true,
+                scrollWheelZoom: true
+            }
+        });
+        //地図表示
+        ymap.drawMap(new Y.LatLng(35.65851613933086, 139.7017727955547), 17);
+        //地図レイヤの切り替え
+        ymap.addControl(new Y.LayerSetControl());
+        //スケールバー
+        ymap.addControl(new Y.ScaleControl());
+        //スライダー
+        //ymap.addControl(new Y.SliderZoomControl());
+        //中心軸を元
+        ymap.zoomIn();
+        ymap.zoomOut();
+        //ピンのアイコン設定
+        var icon = new Y.Icon('pin_color.png', {
+            iconSize: new Y.Size(26, 42)
+        });
+        //マーカ表示
+        var marker = new Y.Marker(new Y.LatLng(35.6624828272, 139.7000723278),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('魚民 渋谷神南店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6600054248, 139.7036860089),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('安安 渋谷宮益坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6596418653, 139.7040865450),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('MAITA まいた 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6615442716, 139.6981905809),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('但馬屋 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6597605630, 139.7078309443),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('大衆和牛酒場 コンロ家 霜降り和牛鍋と神戸牛ホルモン鉄板焼 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6575693354, 139.7046293597),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('貸切パーティー J-stream ジェイストリーム 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6610551380, 139.6973670593),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('やきとり家 すみれ 渋谷宇田川町店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6610415241, 139.6972065180),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('貸切パーティ LIFE ライフ');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6601052919, 139.6991252813),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('牛若丸 渋谷本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6599900411, 139.6996530189),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('肉とチーズバル 渋谷ミート SHIBUYA MEAT');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6599970453, 139.7019194927),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('楽蔵 うたげ 渋谷駅前店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6601138212, 139.6960983160),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ぶんがぶんが Bunga Bunga 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6614134579, 139.6983766814),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ミラフローレス MIRAFLORES 渋谷スペイン坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6601822437, 139.6997277271),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('Munch&Chill マンチアンドチル 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6598212543, 139.7027644279),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('桂　渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6596198532, 139.7014562138),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('居酒屋 官兵衛 渋谷駅前店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6612357054, 139.6985725052),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('土間土間 渋谷センター街 渋谷ちとせ会館店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6647103848, 139.7012193633),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('UNDER DEER LOUNGE アンダー ディアー ラウンジ × グリーンラウンジ');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6558634578, 139.7061851292),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('T8 Steak House 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6587583266, 139.7030694446),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('スランジェ 渋谷 ヒカリエ');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6582860660, 139.6996419770),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('黄金屋 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6591951098, 139.6988714505),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('The Neworder Table 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6576669655, 139.6995092353),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('吟の利久 ginno-rikyu 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6591370273, 139.6976187815),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('個室居酒屋 楽楽 らくらく 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6591163862, 139.6943257288),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('トムボーイ TOMBOY 渋谷円山町店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609776812, 139.6986591749),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('渋谷テラス 渋谷駅前店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6616693189, 139.7004923247),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('Cheese Dish Factory 渋谷モディ店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6611290492, 139.6985161254),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('仙台牛たんバル 牛の舌 渋谷肉横丁店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6575669721, 139.6993339764),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('屋内BBQ 渋谷ガーデンルーム');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6615412115, 139.6980086520),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ゆるり 渋谷本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6591014755, 139.6976098948),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('居酒屋 まるげん MARUGEN  渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6591228903, 139.6986675818),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('甘太郎 渋谷道玄坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6612357048, 139.6985502849),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('居酒屋一休 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609723798, 139.6977506412),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('地鶏和食 個室居酒屋 鳥厨 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6574724003, 139.7045710352),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('Living Bar M&W TOKYO エムダブリュートーキョー 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6611854153, 139.6978978424),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('博多串焼き 野菜巻き串 どげんね');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6590415179, 139.6989447837),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('トムボーイ TOMBOY 渋谷道玄坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6611290492, 139.6985161254),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('肉広場 渋谷 肉横丁2階');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6571916095, 139.6945730071),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('龍盛菜館 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6611290492, 139.6985161254),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('室内ビアガーデン TOMO トモ 渋谷ハチ公口店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6614573421, 139.6983836235),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ジュマンジ33 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6595998573, 139.7015250977),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('肉屋の台所 渋谷宮益坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6603496887, 139.6983725577),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('トロハチ TOROHACHI 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6627089277, 139.7006289381),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('The Rally Table ザラリーテーブル T4 TOKYO 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6625064351, 139.7000506620),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('TGIフライデーズ 渋谷神南店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609143366, 139.6979714581),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('海千魚千 渋谷本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6588804025, 139.6981031950),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('渋谷 ピカリエ PIKARIE 道玄坂本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609121157, 139.6980097882),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('桜ガーデン SAKURA GARDEN 渋谷本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6569525850, 139.6988901499),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('日本酒バル 富士屋');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6602713313, 139.6971398878),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('肉バル シュラスコ 渋谷本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609779594, 139.6986755624),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('渋谷ガーデンファーム 渋谷駅前店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6581641278, 139.6993592281),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('肉バル グラム Glam 渋谷駅前店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6598819812, 139.6990316871),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('千年の宴 渋谷文化村通り店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6583020622, 139.6954020589),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ジーカンズ JEEKAHN\'S 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6587912559, 139.6984790000),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('やきとりセンター 渋谷道玄坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609384937, 139.6977142567),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('焼肉 ふうふう亭 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6580249917, 139.6999197416),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('貸切パーティールーム デバージ DeBarge 渋谷');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6602696083, 139.7054308501),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('タパス＆タパス 渋谷青山通り入口店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6580683099, 139.6995361614),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ビーハウス BEE HOUSE 渋谷本店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6599555824, 139.6989730780),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('月の夢');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6617581163, 139.6974398028),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('かいり はなれ 渋谷センター街店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6617126404, 139.7002317896),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ウメ子の家 花咲酒蔵 渋谷公園通り店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6612023583, 139.6979178400),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('Tio Rico RESTOBAR 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6581638504, 139.6993725603),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('肉とクラフトビール やまもと 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6602649743, 139.6983067334),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('しゃぶしゃぶれたす 渋谷センター街店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6573161479, 139.6986171029),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('溶岩焼肉ダイニング bonbori 渋谷道玄坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6592609096, 139.6978948642),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('土間土間 渋谷道玄坂店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6591909460, 139.6989625540),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('塚田農場 渋谷本店 宮崎県日南市');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6606582586, 139.6981314547),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ソルアミーゴ SOL AMIGO 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6578294341, 139.6990181594),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('ディプント Di PUNTO 渋谷店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6609607398, 139.6987030607),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('炙りや鶏兵衛 渋谷駅前店');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6570028058, 139.6969686444),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('LAUREL TOKYO ローレルトーキョー');
+ymap.addFeature(marker);
+var marker = new Y.Marker(new Y.LatLng(35.6614772981, 139.6968218110),  {
+ icon: icon 
+});
+ymap.addFeature(marker);
+marker.bindInfoWindow('アリービーチ Alee Beach 渋谷宇田川町店');
+ymap.addFeature(marker);
+        /*
+        var markers = [];
+        markers.push(new Y.Marker(new Y.LatLng(35.65851613933086, 139.7017727955547)), {
+            icon: icon
+        });
+        markers.push(new Y.Marker(new Y.LatLng(35.659018623807, 139.70356593366)), {
+            icon: icon
+        });
+        */
+        /*複数マーカプログラム[memo]
+        for (i = 0; i < data.length; i++) {
+            var myMarker = new Y.Marker(data[i].position);
+            myMarker.bindInfoWindow(data[i].content);
+            myMap.addFeature(myMarker);
+        } 
+        */
+        }
+
+        </script>
+        </a>
+       
+        
+            
+        </main>
+    
+
+<div id="ymapdebug" style="display: none; position: absolute; background: rgb(238, 238, 238); left: 847px; top: 921px; width: 400px; height: 220px; z-index: 999; border-style: solid;"><div style="height:20px;background-color:#ccc">Log<span style="  margin-left:10px; text-decoration:underline; cursor:pointer; ">clear</span><span style=" margin-left:10px; text-decoration:underline; cursor:pointer; ">close</span></div><div style="width: 400px; height: 200px; background: rgb(255, 255, 255); overflow: auto;"></div></div></body></html>
