@@ -813,11 +813,7 @@ footer img {
 
 }
 
-.shot_list_cell a {
-	color:#fff;
-}
-
-.left_area1, .left_area5, .left_area9, .left_area13{
+.left_area1, .left_area5 {
 	padding: 70px 0px 0px 0px;
 	border-radius: 0px 0px 0px 0px;
 	background-color: #F7931E;
@@ -826,7 +822,7 @@ footer img {
 	float: left;
 }
 
-.left_area2, .left_area6, .left_area10,  .left_area14 {
+.left_area2, .left_area6 {
 	padding: 70px 0px 0px 0px;
 	border-radius: 0px 0px 0px 0px;
 	background-color: #00A99D;
@@ -835,7 +831,7 @@ footer img {
 	float: left;
 }
 
-.left_area3, .left_area7, .left_area11, .left_area15 {
+.left_area3, .left_area7 {
 	padding: 70px 0px 0px 0px;
 	border-radius: 0px 0px 0px 0px;
 	background-color: #29ABE2;
@@ -844,7 +840,7 @@ footer img {
 	float: left;
 }
 
-.left_area4, .left_area8, .left_area12, .left_area16{
+.left_area4, .left_area8 {
 	padding: 70px 0px 0px 0px;
 	border-radius: 0px 0px 0px 0px;
 	background-color: #D9456D;
